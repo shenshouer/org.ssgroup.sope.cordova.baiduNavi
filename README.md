@@ -13,7 +13,7 @@
 
 2、下载百度sdk之后将libbaiduNaviSDK.a放置于src/ios/libs/BaiduNaviSDK/目录
 
-3、在cordova项目目录下执行 cordova plugin add 下载到本地org.ssgroup.sope.cordova.baiduNavi的目录路径
+3、在cordova项目目录下执行 cordova plugin add [下载到本地org.ssgroup.sope.cordova.baiduNavi的目录路径]
 
 
 ## 接口描述
