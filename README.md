@@ -5,10 +5,16 @@
 
 ## 安装
 
-由于github限制了上传文件的大小，最大为100MB，而百度导航sdk中的一个框架文件libbaiduNaviSDK.a超过了100MB，本仓库中已经删除了这个文件。如果有需要，请下载百度sdk之后将libbaiduNaviSDK.a放置于src/ios/libs/BaiduNaviSDK/目录下即可
+由于github限制了上传文件的大小，最大为100MB，而百度导航sdk中的一个框架文件libbaiduNaviSDK.a超过了100MB，本仓库中已经删除了这个文件。所以不能通过cordova plugin add 命令安装。
 
-###1、cordova plugin add https://github.com/shenshouer/org.ssgroup.sope.cordova.baiduNavi
-###2、将下载百度导航sdk中的libbaiduNaviSDK.a放置于src/ios/libs/BaiduNaviSDK/
+1、下载本项目到本地：
+	
+	git clone https://github.com/shenshouer/org.ssgroup.sope.cordova.baiduNavi.git
+
+2、下载百度sdk之后将libbaiduNaviSDK.a放置于src/ios/libs/BaiduNaviSDK/目录
+
+3、在cordova项目目录下执行 cordova plugin add 下载到本地org.ssgroup.sope.cordova.baiduNavi的目录路径
+
 
 ## 接口描述
 		// 真实导航
