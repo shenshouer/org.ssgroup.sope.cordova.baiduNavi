@@ -22,7 +22,7 @@
         	var pointsInfo = {};
         	exec(onSuccess, onError, "Baidu", "simulateNavi", [pointsInfo]);
     	}
-模拟导航中不需要传入其实地标与结束地标，程序中已经写死。
+模拟导航中不需要传入实际的开始坐标与结束地标，程序中已经写死。
 真实导航中坐标数据格式如下：
 
 		var orderInfo = {
@@ -35,6 +35,21 @@
 
 ## 使用
 	
-	在js中调用方法如下：
+1、使用xcode打开cordova生成的ios项目
+
+2、在appDelegate.m文件中：
+
+导入头文件
+	#import "BNCoreServices.h"
+
+在- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions方法下添加：
+
+	[BNCoreServices_Instance initServices:@"你自己的key"];
+    [BNCoreServices_Instance startServicesAsyn:nil fail:nil];
+
+在js中调用方法如下：
+
 		somai.baidu.startNavi(orderInfo, successhandler, errorhandler);
     	somai.baidu.simulateNavi(successhandler, errorhandler);
+
+参考：https://github.com/shenshouer/NaviExample
